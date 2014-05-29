@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cmcdelhi.cmcdelhiquark"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.cmcdelhi.cmcdelhiquark.SplashScreenActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <activity android:name="com.facebook.LoginActivity" />
+        <activity
+            android:name="com.cmcdelhi.cmcdelhiquark.MotherActivity"
+            android:label="CMC Delhi Quark" >
+            <intent-filter>
+                <action android:name="com.cmcdelhi.cmcdelhiquark.MotherActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cmcdelhi.cmcdelhiquark.FullMenuActivity"
+            android:label="@string/title_activity_course_list" >
+            <intent-filter>
+                <action android:name="com.cmcdelhi.cmcdelhiquark.FullMenuActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cmcdelhi.cmcdelhiquark.CourseListActivity"
+            android:label="@string/title_activity_course_list" >
+            <intent-filter>
+                <action android:name="com.cmcdelhi.cmcdelhiquark.CourseListActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cmcdelhi.cmcdelhiquark.KnowUsActivity"
+            android:label="@string/title_activity_know_us" >
+            <intent-filter>
+                <action android:name="com.cmcdelhi.cmcdelhiquark.KnowUsActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cmcdelhi.cmcdelhiquark.EnquiryActivity"
+            android:label="@string/title_activity_enquiry" >
+            <intent-filter>
+                <action android:name="com.cmcdelhi.cmcdelhiquark.EnquiryActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cmcdelhi.cmcdelhiquark.TermsConditionActivity"
+            android:label="@string/title_activity_terms_condition" >
+            <intent-filter>
+                <action android:name="com.cmcdelhi.cmcdelhiquark.TermsConditionActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cmcdelhi.cmcdelhiquark.CourseActivity"
+            android:label="@string/title_activity_course" >
+            <intent-filter>
+                <action android:name="com.cmcdelhi.cmcdelhiquark.CourseActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.cmcdelhi.notification.CMCNotificationGenerationService" />
+        <service android:name="com.cmcdelhi.locationSilent.CMCCellIdInfoUpdateService" />
+        <service android:name="com.cmcdelhi.locationSilent.PhoneSilenterByCellId" />
+        <service android:name="com.cmcdelhi.locationSilent.PhoneSilenterByGPS" />
+
+        <activity
+            android:name="com.cmcdelhi.cmcdelhiquark.ImageNotesActivity"
+            android:label="@string/title_activity_image_notes" >
+            <intent-filter>
+                <action android:name="com.cmcdelhi.cmcdelhiquark.ImageNotesActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cmcdelhi.cmcdelhiquark.UtilityActivity"
+            android:label="@string/title_activity_utility" >
+            <intent-filter>
+                <action android:name="com.cmcdelhi.cmcdelhiquark.UtilityActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        
+        
+         <service android:name="WidgetHandler$BackgroundService" />
+
+        <receiver
+            android:name="com.cmcdelhi.widget.WidgetHandler"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider" />
+        </receiver>
+        
+        
+    </application>
+
+</manifest>

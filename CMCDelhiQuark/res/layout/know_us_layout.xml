@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/aboutLayoutBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_margin="3dp"
+        android:layout_weight="1"
+        android:background="@drawable/layout_bg_rate_us" >
+
+        <TextView
+            android:id="@+id/rateUsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="3dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="3dp"
+            android:paddingTop="3dp"
+            android:text="Rate US !"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="9" >
+-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="5"
+                android:background="@drawable/layout_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp" >
+
+                    <TextView
+                        android:id="@+id/cmcDelhiTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="3dp"
+                        android:paddingTop="3dp"
+                        android:text="CMC Delhi ,Pitampura"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <ImageView
+                        android:id="@+id/cmcDelhiAboutExpand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/nav_expand_dark" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cmcDelhiAboutContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="6"
+                    android:padding="7dp"
+                    android:text="We are awarded the best quality and  delivery location of CMC Limited in whole of Northern India including Delhi NCR Noida  Gurgaon U.P. Punjab  Haryana Rajasthan Bihar Uttranchal Himachal Pradesh  J  K 2001  2011 . \n  Course contents are designed according to current trends in the IT industry which offers unique opportunity to the higher education aspirants to enhance their technical skills and pursue studies on regular basis with weekdays classes on 5 days a week or weekend classes on Saturday/Sunday. \n Course contents are designed according to current trends in the IT industry which offers unique opportunity to the higher education aspirants to enhance their technical skills and pursue studies on regular basis with weekdays classes on 5 days a week or weekend classes on Saturday/Sunday."
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="5"
+                android:background="@drawable/layout_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp" >
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="3dp"
+                        android:paddingTop="3dp"
+                        android:src="@drawable/ic_launcher" />
+
+                    <ImageView
+                        android:id="@+id/cmcAboutExpand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/nav_expand_dark" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cmcAboutContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="6"
+                    android:padding="7dp"
+                    android:text="CMC Limited is a leading IT solutions company and a subsidiary of Tata Consultancy Services Limited (TCS Ltd), one of the world&apos;s leading information technology consulting, services and business process outsourcing organisations. We are a part of the Tata group, India&apos;s best-known business conglomerate. Today, CMC Limited, an ISO 9001:2000, certified and CMMI Level V accredited organisation, is positioned as a premier IT solutions provider in the fast growing and competitive IT market.CMC is committed to the highest standards of corporate governance and social responsibility. Rooted in theTata group&apos;s long history of putting people before profits and policy of leadership with trust, CMC believes in being ethical and fair in its business dealings with all stakeholders -- employees, customers, partners, investors and the community.
+With 18 offices, 150 service locations, 520 non-resident locations and over 3,800 employees worldwide, we provide a wide spectrum of unique Information Technology solutions and services to a clientele of premier organisations in the government and private sectors. CMC Americas, our subsidiary, services clients in the US, while our branch offices in the UK and Dubai market our products and services in Europe, Africa and the Middle East.
+Since its incorporation in 1975, CMC has an enviable record of successfully building IT solutions for massive and complex infrastructure and market projects CMC&apos;s customer orientation and service culture lead to enduring bonds with clients. Its distinct value proposition and service culture, coupled with our track record of successful service delivery, are reflected in long-standing customer relationships with dominant players in key infrastructure, services and government sectors.Its customers include some of the biggest organisations in India: Reserve Bank of India, Indian Railways, Indian Oil Corporation Limited, Bharat Petroleum Corporation Limited, Oil and Natural Gas Corporation Limited, United Western Bank, Bank of India and Bank of Baroda.
+Three of the many major projects undertaken by CMC Limited A passenger ticketing and reservations system for Indian Railways, which runs 6,000 passenger trains carrying over 10 million passengers a day, on a 90,000-km railway network covering around 8,000 railway stations. A cargo handling system is a comprehensive online real time cargo handling system to integrate all complex and varied activities of container terminals. This system has been implemented for several Indian and International ports. An online transaction processing system for the Bombay Stock Exchange, which handles millions of securities trading transactions every day."
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

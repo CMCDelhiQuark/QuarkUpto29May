@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CMC Delhi Quark</string>
+    <string name="menu_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="app_id">635133926519343</string>
+    <string name="publish">Publish</string>
+    <string name="share">Share</string>
+    <string name="send_request">Send Request</string>
+    <string name="title_activity_another">AnotherActivity</string>
+    <string name="title_activity_course_list">CourseListActivity</string>
+
+    <color name="blue">#3F7AB6</color>
+    <color name="white">#FFFFFF</color>
+    <color name="baseblue">#6F9AD0</color>
+
+    <string name="title_activity_know_us">KnowUsActivity</string>
+    <string name="title_activity_enquiry">EnquiryActivity</string>
+    <string name="title_activity_terms_condition">TermsConditionActivity</string>
+    <string name="title_activity_course">CourseActivity</string>
+    <string name="title_activity_image_notes">ImageNotesActivity</string>
+    <string name="title_activity_utility">UtilityActivity</string>
+
+</resources>

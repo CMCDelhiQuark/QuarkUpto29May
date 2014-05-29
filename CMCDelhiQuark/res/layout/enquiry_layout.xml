@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="5dp"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/edName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:ems="12"
+            android:text="Enter Name"
+            android:textColor="@android:color/darker_gray"
+            android:textColorLink="@color/white" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/edMobNo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:ems="12"
+            android:inputType="phone"
+            android:text="Enter Mobile Number"
+            android:textColor="@android:color/darker_gray" />
+
+        <Spinner
+            android:id="@+id/spinnerCourse"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edMobNo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerCourse"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:ems="12"
+            android:inputType="textEmailAddress"
+            android:text="Enter EMAIl"
+            android:textColor="@android:color/darker_gray" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:ems="12"
+            android:text="Enter Enquiry"
+            android:textColor="@android:color/darker_gray" />
+
+        <Spinner
+            android:id="@+id/spinnerReplyVia"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerReplyVia"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="#000000"
+            android:text="Sumbit"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+</ScrollView>

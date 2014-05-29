@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/calldialogBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_bg_rate_us"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/phone1rellayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3" >
+
+            <TextView
+                android:id="@+id/number1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Phone 1 "
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/number1"
+                android:layout_centerHorizontal="true"
+                android:text="011-65905335"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/darker_gray" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <RelativeLayout
+            android:id="@+id/phone2rellayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3" >
+
+            <TextView
+                android:id="@+id/number2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Phone 2"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/number2"
+                android:layout_centerHorizontal="true"
+                android:text="011-65655335"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/darker_gray" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <RelativeLayout
+            android:id="@+id/phone3rellayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3" >
+
+            <TextView
+                android:id="@+id/number3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Cell "
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/number3"
+                android:layout_centerHorizontal="true"
+                android:text="09810324822"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/darker_gray" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
