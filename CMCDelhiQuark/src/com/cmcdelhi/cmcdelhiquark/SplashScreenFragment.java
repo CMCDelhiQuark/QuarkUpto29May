@@ -52,7 +52,7 @@ import com.facebook.widget.LoginButton;
 import com.facebook.widget.WebDialog;
 import com.facebook.widget.WebDialog.OnCompleteListener;
 
-public class SplashScreenFragment extends Fragment {
+public class SplashScreenFragment extends  Fragment {
 
 	LinearLayout ll;
 	GradientDrawable gd;
@@ -415,7 +415,7 @@ public class SplashScreenFragment extends Fragment {
 		uiHelper.onSaveInstanceState(outState);
 	}
 
-	public static void publishFeedDialog() {
+	public  void publishFeedDialog() {
 		Bundle params = new Bundle();
 		params.putString("name", "Guffy Wave is amazing guy");
 		params.putString("caption", "I have made an amazing app");
@@ -425,6 +425,9 @@ public class SplashScreenFragment extends Fragment {
 		params.putString("link", "http://www.cmcdelhi.com/");
 		params.putString("picture", "http://www.cmcdelhi.com/cmclogo.png");
 
+		
+		
+		
 		WebDialog feedDialog = (new WebDialog.FeedDialogBuilder(getActivity(),
 				Session.getActiveSession(), params)).setOnCompleteListener(
 				new OnCompleteListener() {
@@ -466,7 +469,7 @@ public class SplashScreenFragment extends Fragment {
 		feedDialog.show();
 	}
 
-	public static void publishStory() {
+	public  void publishStory() {
 		Session session = Session.getActiveSession();
 
 		if (session != null) {

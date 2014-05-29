@@ -1,6 +1,12 @@
 package com.cmcdelhi.cmcdelhiquark;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
 import java.util.Random;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import cm.cmcdelhi.dialog.CMCDialogCreator;
 
@@ -8,6 +14,16 @@ import com.cmcdelhi.locationSilent.CMCCellIdInfoUpdateService;
 import com.cmcdelhi.locationSilent.PhoneSilenterByCellId;
 import com.cmcdelhi.locationSilent.PhoneSilenterByGPS;
 import com.cmcdelhi.notification.CMCNotificationGenerator;
+import com.facebook.FacebookException;
+import com.facebook.FacebookOperationCanceledException;
+import com.facebook.FacebookRequestError;
+import com.facebook.HttpMethod;
+import com.facebook.Request;
+import com.facebook.RequestAsyncTask;
+import com.facebook.Response;
+import com.facebook.Session;
+import com.facebook.widget.WebDialog;
+import com.facebook.widget.WebDialog.OnCompleteListener;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -45,6 +61,11 @@ public class MotherActivity extends Activity {
 	ActionBar ab;
 	HorizontalScrollView hsv;
 	Intent recievedFromSplash;
+
+	private static final List<String> PERMISSIONS = Arrays
+			.asList("publish_actions");
+	private static final String PENDING_PUBLISH_KEY = "pendingPublishReauthorization";
+	private boolean pendingPublishReauthorization = false;
 
 	static UserFBData ufbd;
 	CMCCellIdInfoUpdateService ccius;
@@ -168,7 +189,116 @@ public class MotherActivity extends Activity {
 
 			@Override
 			public void onClick(View arg0) {
-				SplashScreenFragment.publishStory();
+
+				Bundle params = new Bundle();
+				params.putString("name", "Guffy Wave is amazing guy");
+				params.putString("caption", "I have made an amazing app");
+				params.putString(
+						"description",
+						"The Facebook SDK for Android makes it easier and faster to dCMC Limited is a leading IT solutions company and a subsidiary of Tata Consultancy Services Limited (TCS Ltd), one of the world's leading information technology consulting, services and business process outsourcing organisations. We are a part of the Tata group, India's best-known business conglomerate. Today, CMC Limited, an ISO 9001:2000, certified and CMMI Level V accredited organisation, is positioned as a premier IT solutions provider in the fast growing and competitive IT market");
+				params.putString("link", "http://www.cmcdelhi.com/");
+				params.putString("picture",
+						"http://www.cmcdelhi.com/cmclogo.png");
+
+				WebDialog feedDialog = (new WebDialog.FeedDialogBuilder(
+						getBaseContext(), Session.getActiveSession(), params))
+						.setOnCompleteListener(new OnCompleteListener() {
+
+							@Override
+							public void onComplete(Bundle values,
+									FacebookException error) {
+								if (error == null) {
+									// When the story is posted, echo the
+									// success
+									// and the post Id.
+									final String postId = values
+											.getString("post_id");
+									if (postId != null) {
+										Toast.makeText(getBaseContext(),
+												"Posted story, id: " + postId,
+												Toast.LENGTH_SHORT).show();
+									} else {
+										// User clicked the Cancel button
+										Toast.makeText(getBaseContext(),
+												"Publish cancelled",
+												Toast.LENGTH_SHORT).show();
+									}
+								} else if (error instanceof FacebookOperationCanceledException) {
+									// User clicked the "x" button
+									Toast.makeText(getBaseContext(),
+											"Publish cancelled",
+											Toast.LENGTH_SHORT).show();
+								} else {
+									// Generic, ex: network error
+									Toast.makeText(getBaseContext(),
+											"Error posting story",
+											Toast.LENGTH_SHORT).show();
+								}
+							}
+
+						}).build();
+				feedDialog.show();
+
+				// ///////////xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/////////////////////////////////////////////////////////
+				// Session session = Session.getActiveSession();
+				//
+				// if (session != null) {
+				//
+				// // Check for publish permissions
+				// List<String> permissions = session.getPermissions();
+				// if (!isSubsetOf(PERMISSIONS, permissions)) {
+				// pendingPublishReauthorization = true;
+				// Session.NewPermissionsRequest newPermissionsRequest = new
+				// Session.NewPermissionsRequest(
+				// MotherActivity.this, PERMISSIONS);
+				// session.requestNewPublishPermissions(newPermissionsRequest);
+				// return;
+				// }
+				//
+				// Bundle postParams = new Bundle();
+				// postParams.putString("name", "Facebook SDK for Android");
+				// postParams.putString("caption",
+				// "Build great social apps and get more installs.");
+				// postParams
+				// .putString(
+				// "description",
+				// "The Facebook SDK for Android makes it easier and faster to develop Facebook integrated Android apps.");
+				// postParams.putString("link",
+				// "https://developers.facebook.com/android");
+				// postParams
+				// .putString("picture",
+				// "https://raw.github.com/fbsamples/ios-3.x-howtos/master/Images/iossdk_logo.png");
+				//
+				// Request.Callback callback = new Request.Callback() {
+				// public void onCompleted(Response response) {
+				// JSONObject graphResponse = response
+				// .getGraphObject().getInnerJSONObject();
+				// String postId = null;
+				// try {
+				// postId = graphResponse.getString("id");
+				// } catch (JSONException e) {
+				// Log.i("JSONException",
+				// "JSON error " + e.getMessage());
+				// }
+				// FacebookRequestError error = response.getError();
+				// if (error != null) {
+				// Toast.makeText(getBaseContext(),
+				// error.getErrorMessage(),
+				// Toast.LENGTH_SHORT).show();
+				// } else {
+				// Toast.makeText(getBaseContext(), postId,
+				// Toast.LENGTH_LONG).show();
+				// }
+				// }
+				// };
+				//
+				// Request request = new Request(session, "me/feed",
+				// postParams, HttpMethod.POST, callback);
+				//
+				// RequestAsyncTask task = new RequestAsyncTask(request);
+				// task.execute();
+				// }
+
 			}
 		});
 
@@ -339,6 +469,16 @@ public class MotherActivity extends Activity {
 	protected void onResume() {
 		Log.d("FB QUARK", "Inside OnResume of Moher Activity");
 		super.onResume();
+	}
+
+	private boolean isSubsetOf(Collection<String> subset,
+			Collection<String> superset) {
+		for (String string : subset) {
+			if (!superset.contains(string)) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 }

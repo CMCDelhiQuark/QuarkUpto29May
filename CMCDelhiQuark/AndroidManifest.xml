@@ -124,10 +124,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        
-        
-        
-         <service android:name="WidgetHandler$BackgroundService" />
+
+        <service android:name="WidgetHandler$BackgroundService" />
 
         <receiver
             android:name="com.cmcdelhi.widget.WidgetHandler"
@@ -141,8 +139,6 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_provider" />
         </receiver>
-        
-        
     </application>
 
 </manifest>
