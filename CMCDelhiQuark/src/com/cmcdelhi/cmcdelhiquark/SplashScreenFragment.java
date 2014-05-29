@@ -415,7 +415,7 @@ public class SplashScreenFragment extends Fragment {
 		uiHelper.onSaveInstanceState(outState);
 	}
 
-	private void publishFeedDialog() {
+	public static void publishFeedDialog() {
 		Bundle params = new Bundle();
 		params.putString("name", "Guffy Wave is amazing guy");
 		params.putString("caption", "I have made an amazing app");
@@ -466,7 +466,7 @@ public class SplashScreenFragment extends Fragment {
 		feedDialog.show();
 	}
 
-	private void publishStory() {
+	public static void publishStory() {
 		Session session = Session.getActiveSession();
 
 		if (session != null) {

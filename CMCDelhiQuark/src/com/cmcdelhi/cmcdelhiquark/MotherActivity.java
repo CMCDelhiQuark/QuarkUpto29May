@@ -151,11 +151,12 @@ public class MotherActivity extends Activity {
 
 		// imgv2.setBackgroundColor(LockedColorSingleton.getInstance().colorVal);
 
-//		ImageView imgv3 = new ImageView(this);
-//		imgv3.setImageResource(R.drawable.orangegirl);
-//		imgv3.setLayoutParams(imgParams);
-//		// imgv3.setBackgroundColor(LockedColorSingleton.getInstance().colorVal);
-//		imgv3.setBackgroundColor(Color.WHITE);
+		// ImageView imgv3 = new ImageView(this);
+		// imgv3.setImageResource(R.drawable.orangegirl);
+		// imgv3.setLayoutParams(imgParams);
+		// //
+		// imgv3.setBackgroundColor(LockedColorSingleton.getInstance().colorVal);
+		// imgv3.setBackgroundColor(Color.WHITE);
 
 		TextView tvUp = new TextView(this);
 		tvUp.setLayoutParams(txtDescParams);
@@ -163,6 +164,13 @@ public class MotherActivity extends Activity {
 		tvUp.setTextColor(LockedColorSingleton.getInstance().colorVal);
 		tvUp.setTypeface(tf);
 		tvUp.setTextSize((float) (0.080 * height));
+		tvUp.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				SplashScreenFragment.publishStory();
+			}
+		});
 
 		layoutInsideHSV.addView(imgv1);
 		// layoutInsideHSV.addView(imgv2);
